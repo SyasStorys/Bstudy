@@ -1,3 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!-- 
+	작성자 : 전형동
+	작성일 : 2019.01.06
+	▼ 수정내용 ▼
+	
+	카테고리를 for문을 사용하여 View에 띄우는중
+	카테고리별로 DTO를 작성하여 진행에정
+	URL은 DB에 작성된 id를 활용하여 카테고리 리스트별로
+	링크를 걸 에정임
+-->
+
 <nav class="navbar navbar-expand-lg">
         <div class="container"><a href="${contextRoot }/home" class="navbar-brand home"><img src="${img}/logo.png" alt="Bstudy logo" class="d-none d-md-inline-block"><img src="${img}/logo-small.png" alt="Bstudy logo" class="d-inline-block d-md-none"><span class="sr-only">Bstudy - go to homepage</span></a>
           <div class="navbar-buttons">
@@ -14,10 +29,9 @@
                       <div class="col-md-6 col-lg-3">
                         <h5>Clothing</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="${contextRoot }/tshirts" class="nav-link">T-shirts</a></li>
-                          <li class="nav-item"><a href="${contextRoot }/shirts" class="nav-link">Shirts</a></li>
-                          <li class="nav-item"><a href="${contextRoot }/pants" class="nav-link">Pants</a></li>
-                          <li class="nav-item"><a href="${contextRoot }/accessories" class="nav-link">Accessories</a></li>
+                        <c:forEach items="${categories }" var="category">
+                        	<li class="nav-item"><a href="${contextRoot }/show/category/${category.id}/products" class="nav-link">${category.name }</a></li>
+                        </c:forEach>
                         </ul>
                       </div>
                       <div class="col-md-6 col-lg-3">
