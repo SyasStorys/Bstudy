@@ -5,9 +5,9 @@
             <div class="col-lg-6 text-center text-lg-right">
               <ul class="menu list-inline mb-0">
                 <li class="list-inline-item"><a href="#" data-toggle="modal" data-target="#login-modal">Login</a></li>
-                <li class="list-inline-item"><a href="register.html">Register</a></li>
-                <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                <li class="list-inline-item"><a href="#">Recently viewed</a></li>
+                <li class="list-inline-item"><a href="${contextRoot }/user/register">Register</a></li>
+                <li class="list-inline-item"><a href="${contextRoot }/">Contact</a></li>
+                <li class="list-inline-item"><a href="${contextRoot }/">Recently viewed</a></li>
               </ul>
             </div>
           </div>

@@ -137,7 +137,7 @@
                       <div class="col-md-6 col-lg-3">
                         <h5>User</h5>
                         <ul class="list-unstyled mb-3">
-                          <li class="nav-item"><a href="register.html" class="nav-link">Register / login</a></li>
+                          <li class="nav-item"><a href="${contextRoot }/user/register" class="nav-link">Register / login</a></li>
                           <li class="nav-item"><a href="customer-orders.html" class="nav-link">Orders history</a></li>
                           <li class="nav-item"><a href="customer-order.html" class="nav-link">Order history detail</a></li>
                           <li class="nav-item"><a href="customer-wishlist.html" class="nav-link">Wishlist</a></li>

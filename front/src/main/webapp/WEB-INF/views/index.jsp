@@ -99,6 +99,13 @@
 	        <!-- *** BLOG HOMEPAGE END ***-->
       	</c:if>
       	
+      	
+      	<c:if test="${userClickRegister == true }">
+	      	<!-- Register -->
+	      	<%@include file="./templates/user/register.jsp" %>  
+	        <!-- Register END -->
+      	</c:if>
+      	
       </div>
     </div>
     <!--
