@@ -4,6 +4,7 @@
   <artifactId>front</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>war</packaging>
+  <url>http://maven.apache.org</url>
   
   	<properties>
 
@@ -22,6 +23,15 @@
 	</properties>
 	
 	<dependencies>
+		
+		<!-- BackEnd 연동 -->
+		<dependency>
+			<groupId>kr.bstudy</groupId>
+			<artifactId>backend</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+	
 		<!-- Spring and Transactions -->
 		<dependency>
 			<groupId>org.springframework</groupId>

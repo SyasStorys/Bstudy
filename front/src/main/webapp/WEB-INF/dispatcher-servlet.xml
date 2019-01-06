@@ -12,7 +12,9 @@
       
       <mvc:resources location="/resources/" mapping="/resources/**" />
       
-    <context:component-scan base-package="kr.bstudy.front" />  
+    <context:component-scan base-package="kr.bstudy.front" />
+    <!-- BackEnd 연동하기 위한 패키지 설정 -->
+    <context:component-scan base-package="kr.bstudy.backend" />  
         
  
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver" >
