@@ -1,0 +1,25 @@
+이클립스 : 아래 링크에서 다운받을 것
+링크 : https://drive.google.com/file/d/1UC46K_OhDlX65MFj-VfpuYDHjKWb3wo7/view?usp=sharing
+
+JAVA : 1.8.191
+프레임워크 : Spring 5.0
+SQL : MySQL, H2 (H2가 진짜 가볍고 괜찮은듯)
+Server : Tomcast 9.0.14
+(apache-tomcat-9.0.14)
+링크 : http://mirror.apache-kr.org/tomcat/tomcat-9/v9.0.14/bin/apache-tomcat-9.0.14.zip
+
+* DB는 테스트후 최종적으로 정해진 것은 로컬용으로 프로젝트에 DataBase.sql 파일로 저장 해놓을 것
+
+ex)
+/*
+   작성자 : 00
+   작성일 : 00
+   테이블명 : 00
+*/
+
+
+
+본 프로젝트는 front와 backend 두 프로젝트를 연동시켜서 진행할 예정
+설령 backend쪽에서 작업하다 중간에 끊겨도
+front쪽에서 backend 연동만 해제하면 front는 문제없이 돌아갈 것임...(아니면 말고)
+
