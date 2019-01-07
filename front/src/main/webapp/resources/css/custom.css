@@ -1,1 +1,7 @@
 /* your styles go here */
+@import url("https://fonts.googleapis.com/css?family=Poor+Story");
+
+* {
+	font-family: 'Poor Story', cursive;
+	font-size: 17px;
+}

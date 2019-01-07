@@ -73,7 +73,7 @@ public class IndexController {
 		
 		category = categoryDAO.get(id);
 		
-		mv.addObject("title", "Bstudy All Products");
+		mv.addObject("title", category.getName());
 		
 		mv.addObject("categories", categoryDAO.list());
 		

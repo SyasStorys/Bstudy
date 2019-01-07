@@ -22,21 +22,26 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
+    
     <!-- Bootstrap CSS-->
     <link rel="stylesheet" href="${vendor}/bootstrap/css/bootstrap.min.css">
+    
     <!-- Font Awesome CSS-->
     <link rel="stylesheet" href="${vendor}/font-awesome/css/font-awesome.min.css">
-    <!-- Google fonts - Roboto -->
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100">
+    
     <!-- owl carousel-->
     <link rel="stylesheet" href="${vendor}/owl.carousel/assets/owl.carousel.css">
     <link rel="stylesheet" href="${vendor}/owl.carousel/assets/owl.theme.default.css">
-    <!-- theme stylesheet-->
+    
+    <!-- 테마 stylesheet-->
     <link rel="stylesheet" href="${css}/style.default.css" id="theme-stylesheet">
-    <!-- Custom stylesheet - for your changes-->
+    
+    <!-- 커스텀 CSS-->
     <link rel="stylesheet" href="${css}/custom.css">
-    <!-- Favicon-->
+    
+    <!-- 파비콘-->
     <link rel="shortcut icon" href="favicon.png">
+    
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -104,6 +109,10 @@
 	      	<!-- Register -->
 	      	<%@include file="./templates/user/register.jsp" %>  
 	        <!-- Register END -->
+      	</c:if>
+      	
+      	<c:if test="${userClickCategoryProducts == true}">
+      		<%@include file="./templates/category/clothing.jsp" %>
       	</c:if>
       	
       </div>
