@@ -223,7 +223,10 @@ $.fn.alignElementsSameHeight = function () {
         children.innerHeight(maxHeight);
 
     });
-
-
-
 }
+
+$(document).ready(function() {
+    $('#example').DataTable({
+    	"ajax": "/json/data/all/products"
+    });
+} );

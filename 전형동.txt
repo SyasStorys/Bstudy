@@ -13,3 +13,9 @@
 내용 : 카테고리 품목 id별로 출력
 
 navbar.jsp 수정
+
+
+2019/01/09
+JsonDataController 추가
+dataTables.bootstrap4.js 추가
+dataTable 적용시켜야 함.. 어떻게 하지..?

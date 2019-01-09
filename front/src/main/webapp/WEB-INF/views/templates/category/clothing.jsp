@@ -12,8 +12,9 @@
                 </ol>
               </nav>
             </div>
+            
             <div class="col-lg-3">
-              
+            <!-- Side Category Start -->
               <div class="card sidebar-menu mb-4">
                 <div class="card-header">
                   <h3 class="h4 card-title">카테고리</h3>
@@ -119,6 +120,7 @@
               <!-- *** MENUS AND FILTERS END ***-->
               <div class="banner"><a href="#"><img src="${img}/banner.jpg" alt="sales 2014" class="img-fluid"></a></div>
             </div>
+            <!-- Side Category End -->
             <div class="col-lg-9">
               <div class="box">
                 <h1>${category.name }</h1>
