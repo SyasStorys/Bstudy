@@ -223,10 +223,85 @@ $.fn.alignElementsSameHeight = function () {
         children.innerHeight(maxHeight);
 
     });
+
+
+    
+    /* 데이터테이블 */
+
+    var jsonUrl = '';
+    if(window.categoryId == ''){
+    	jsonUrl = window.contextRoot + '/json/data/all/products';
+    }
+    else {
+    	jsonUrl = window.contextRoot + '/json/data/category/'+ window.categoryId +'/products';
+    }
+
+    var $table = $('#productListTable');
+    
+    // execute the below code oonly where we have this table
+    if($table.length) {
+    	
+    	$table.DataTable({
+    		lengthMenu : [[3,5,10,-1], ['3 Records', '5 Records', '10 Records', 'ALL']],
+    		pageLength : 5,
+    		ajax : {
+    			url : jsonUrl,
+    			dataSrc : ''
+    		},
+    		columns : [
+    			{
+    				data : 'code',
+    				mRender : function (data, type, row){
+    					return '<img src="'+window.contextRoot+'/resources/img/'+data+'.jpg" class="dataTableImg"/>';
+    				}
+    				
+    			},
+    			{
+    				data : 'name'
+    			},
+    			{
+    				data : 'brand'
+    			},
+    			{
+    				data : 'unitPrice',
+    				mRender : function (data, type, row) {
+    					return '￦' + data
+    				}
+    					
+    			},
+    			{
+    				data : 'quantity'
+    			},
+    			{
+    				data : 'id',
+    				mRender : function (data, type, row) {
+    					
+    					var str = '';
+    					str += '<a href="'+window.contextRoot+'/show/'+data+'/product" class="btn btn-primary">상품보기</a> &#160;';
+    					str += '<a href="'+window.contextRoot+'/cart/add/'+data+'/product" class="btn btn-success">장바구니</a>';
+    					
+    					return str;
+    				}
+    			}
+    			
+    		]
+    	});
+    	
+    }
+    
+
 }
 
-$(document).ready(function() {
-    $('#example').DataTable({
-    	"ajax": "/json/data/all/products"
-    });
-} );
+
+
+
+
+
+
+
+
+
+
+
+
+

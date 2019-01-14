@@ -1,6 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<!-- 
+	작성자 : 전형동
+	작성일 : 1월 14일
+	
+	작성내용 
+	[
+		id : productListTable
+		데이터테이블 추가 
+		관련 js : front.js
+	]
+	
+
+ -->
+
+<script>
+	window.categoryId = '${category.id}'
+</script>
+
 <div class="container">
           <div class="row">
             <div class="col-lg-12">
@@ -121,6 +139,7 @@
               <div class="banner"><a href="#"><img src="${img}/banner.jpg" alt="sales 2014" class="img-fluid"></a></div>
             </div>
             <!-- Side Category End -->
+            
             <div class="col-lg-9">
               <div class="box">
                 <h1>${category.name }</h1>
@@ -143,7 +162,32 @@
                   </div>
                 </div>
               </div>
-              <div class="row products">
+              
+              <table id="productListTable" class="table table-striped table-bordered" style="width : 100%;">
+              		<thead>
+              			<tr>
+              				<th></th>
+              				<th>Name</th>
+              				<th>Brand</th>
+              				<th>Price</th>
+              				<th>Qty. Available</th>
+              				<th></th>
+              			</tr>
+              		</thead>
+              		<tfoot>
+              			<tr>
+              				<th></th>
+              				<th>Name</th>
+              				<th>Brand</th>
+              				<th>Price</th>
+              				<th>Qty. Available</th>
+              				<th></th>
+              			</tr>
+              		</tfoot>
+              	</table>
+
+              
+              <%-- <div class="row products">
                 <div class="col-lg-4 col-md-6">
                   <div class="product">
                     <div class="flip-container">
@@ -284,8 +328,8 @@
                   <!-- /.product            -->
                 </div>
                 <!-- /.products-->
-              </div>
-              <div class="pages">
+              </div> --%>
+              <!-- <div class="pages">
                 <p class="loadMore"><a href="#" class="btn btn-primary btn-lg"><i class="fa fa-chevron-down"></i> Load more</a></p>
                 <nav aria-label="Page navigation example" class="d-flex justify-content-center">
                   <ul class="pagination">
@@ -298,7 +342,7 @@
                     <li class="page-item"><a href="#" aria-label="Next" class="page-link"><span aria-hidden="true">»</span><span class="sr-only">Next</span></a></li>
                   </ul>
                 </nav>
-              </div>
+              </div> -->
             </div>
             <!-- /.col-lg-9-->
           </div>

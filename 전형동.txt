@@ -19,3 +19,16 @@ navbar.jsp 수정
 JsonDataController 추가
 dataTables.bootstrap4.js 추가
 dataTable 적용시켜야 함.. 어떻게 하지..?
+
+<!-- 
+	작성자 : 전형동
+	작성일 : 1월 14일
+	
+	작성내용 
+	[
+		id : productListTable
+		데이터테이블 추가 
+		관련 js : front.js
+	]
+ -->
+

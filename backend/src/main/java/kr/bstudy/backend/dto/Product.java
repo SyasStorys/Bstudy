@@ -20,7 +20,7 @@ public class Product {
 	private String name;
 	private String brand;
 	/* @JsonIgnore
-	 * 필드 레벨에서 무시 될 수있는 속성을 표시하는 데 사용됩니다.
+	 * 필드 레벨에서 무시 될 수있는 속성을 표시하는 데 사용
 	 * */
 	@JsonIgnore
 	private String description;

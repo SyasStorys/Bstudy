@@ -42,17 +42,18 @@
     <!-- 파비콘-->
     <link rel="shortcut icon" href="favicon.png">
     
-    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!-- Bootstrap Datatable CSS -->
+    <link href="${css }/dataTables.bootstrap4.css">
+    
+    <script>
+    	window.contextRoot = '${contextRoot}'
+    </script>
+    
   </head>
 <body>
     <!-- navbar-->
     <header class="header mb-5">
-      <!--
-      *** TOPBAR ***
-      _________________________________________________________
-      -->
+      <!-- *** TOPBAR *** -->
       <%@include file="./templates/header/topbar.jsp" %>
       <!-- TOPBAR End -->
       
@@ -74,31 +75,18 @@
 	      	<%@include file="./templates/slider.jsp" %>  
 	        
 	        <!-- SLIDER END -->
-	        <!--
-	        *** ADVANTAGES HOMEPAGE ***
-	        _________________________________________________________
-	        -->
+	        <!-- *** ADVANTAGES HOMEPAGE *** -->
 	        <%@include file="./templates/advantage.jsp" %>
-	        <!-- /#advantages-->
 	        <!-- *** ADVANTAGES END ***-->
-	        <!--
-	        *** HOT PRODUCT SLIDESHOW ***
-	        _________________________________________________________
-	        -->
-	        <%@include file="./templates/product_slideshow.jsp" %>
 	        
+	        <!-- *** HOT PRODUCT SLIDESHOW *** -->
+	        <%@include file="./templates/product_slideshow.jsp" %>
 	        <!-- PRODUCT SLIDESHOW END -->
 	        
-	        <!--
-	        *** GET INSPIRED ***
-	        _________________________________________________________
-	        -->
+	        <!-- *** GET INSPIRED *** -->
 	        <%@include file="./templates/inspired.jsp" %>
 	        <!-- *** GET INSPIRED END ***-->
-	        <!--
-	        *** BLOG HOMEPAGE ***
-	        _________________________________________________________
-	        -->
+	        <!-- *** BLOG HOMEPAGE *** -->
 	        <%@include file="./templates/blog.jsp" %>
 	        <!-- /.container-->
 	        <!-- *** BLOG HOMEPAGE END ***-->
@@ -117,10 +105,8 @@
       	
       </div>
     </div>
-    <!--
-    *** FOOTER ***
-    _________________________________________________________
-    -->
+    
+    <!-- *** FOOTER  ***-->
     <%@include file="./templates/footer.jsp" %>
     <!-- /#footer-->
     <!-- *** FOOTER END ***-->
@@ -139,6 +125,9 @@
     <script src="${vendor}/owl.carousel/owl.carousel.min.js"></script>
     <script src="${vendor}/owl.carousel2.thumbs/owl.carousel2.thumbs.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js"></script>
+    
+    <script src="${js}/jquery.dataTables.js"></script>
+    <script src="${js}/dataTables.bootstrap4.js"></script>
     <script src="${js}/front.js"></script>
   </body>
 </html>

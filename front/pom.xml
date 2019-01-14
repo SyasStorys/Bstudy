@@ -1,12 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>kr.bstudy</groupId>
-  <artifactId>front</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <packaging>war</packaging>
-  <url>http://maven.apache.org</url>
-  
-  	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>kr.bstudy</groupId>
+	<artifactId>front</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+	<url>http://maven.apache.org</url>
+
+	<properties>
 
 		<!-- Generic properties -->
 		<java.version>1.8</java.version>
@@ -20,17 +22,18 @@
 		<logback.version>1.2.3</logback.version>
 		<slf4j.version>1.7.25</slf4j.version>
 
+		<!-- Test -->
+		<junit.version>4.12</junit.version>
+
 	</properties>
-	
+
 	<dependencies>
-		
-		<!-- BackEnd 연동 -->
+		<!-- bstudy Backend 연동 -->
 		<dependency>
 			<groupId>kr.bstudy</groupId>
 			<artifactId>backend</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
-		
 	
 		<!-- Spring and Transactions -->
 		<dependency>
@@ -44,26 +47,25 @@
 			<version>${spring-framework.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-core</artifactId>
-		    <version>${spring-framework.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring-framework.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-webmvc</artifactId>
-		    <version>${spring-framework.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring-framework.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-web</artifactId>
-		    <version>${spring-framework.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring-framework.version}</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.springframework</groupId>
-		    <artifactId>spring-aop</artifactId>
-		    <version>${spring-framework.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring-framework.version}</version>
 		</dependency>
-		
 
 		<!-- Logging with SLF4J & LogBack -->
 		<dependency>
@@ -78,17 +80,30 @@
 			<version>${logback.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- Test Artifacts -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring-framework.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
 		
 		<dependency>
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>jstl</artifactId>
 		    <version>1.2</version>
 		</dependency>
-		
-		
 
-	</dependencies>	
-	
+	</dependencies>
+
+
 	<build>
 		<plugins>
 			<!-- 자바 최신버전 업데이트 -->
@@ -102,6 +117,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	
+
 </project>
