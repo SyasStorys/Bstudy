@@ -32,3 +32,10 @@ dataTable 적용시켜야 함.. 어떻게 하지..?
 	]
  -->
 
+
+2019.01.15
+
+Single Product 제작
+detail.jsp 추가
+clothing.jsp에 detail.jsp 인클루드
+detail.jsp내용추가
