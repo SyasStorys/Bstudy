@@ -8,13 +8,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import kr.bstudy.backend.dao.CategoryDAO;
+import kr.bstudy.backend.dao.ProductDAO;
 import kr.bstudy.backend.dto.Category;
+import kr.bstudy.backend.dto.Product;
 
 @Controller
 public class IndexController {
 	
 	@Autowired
 	private CategoryDAO categoryDAO;
+	
+	@Autowired
+	private ProductDAO productDAO;
 	
 	/**
 	 * 작성자 ; 전형동
@@ -84,6 +89,53 @@ public class IndexController {
 		return mv;
 		
 	}
+	
+	/**
+	 * 작성자 : 전형동
+	 * 작성일 : 01.15
+	 * 메소드 : 상품보기
+	 * @param id
+	 * @return
+	 */
+	@RequestMapping(value = "/show/{id}/product")
+	public ModelAndView showSingleProduct(@PathVariable int id) {
+		
+		ModelAndView mv  = new ModelAndView("index");
+		
+		Product product = productDAO.get(id);
+		Category category = null;
+		category = categoryDAO.get(id);
+		
+		// update the count
+		product.setViews(product.getViews() + 1);
+		productDAO.update(product);
+		
+		//-----------------------------------------------------------
+		
+		mv.addObject("title", product.getName());
+		mv.addObject("product", product);
+		
+		mv.addObject("categories", categoryDAO.list());
+		mv.addObject("category", category);
+		
+		mv.addObject("userClickShowProduct", true);
+		
+		return mv;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 }

@@ -46,7 +46,8 @@
     <link href="${css }/dataTables.bootstrap4.css">
     
     <script>
-    	window.contextRoot = '${contextRoot}'
+    	window.contextRoot = '${contextRoot}';
+    	window.categoryId = '${category.id}';
     </script>
     
   </head>
@@ -99,7 +100,7 @@
 	        <!-- Register END -->
       	</c:if>
       	
-      	<c:if test="${userClickCategoryProducts == true}">
+      	<c:if test="${userClickCategoryProducts == true || userClickShowProduct == true}">
       		<%@include file="./templates/category/clothing.jsp" %>
       	</c:if>
       	
